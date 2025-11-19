@@ -20,8 +20,6 @@ for (i in 1:n_hijos){
   hijos[[i]] <- genotipo
 }
 
-}
-
 ### Resultados 
 for (i in 1: length (hijos)) {
   cat ("hijo", i, ":", hijos [[i]][1], "+", hijos [[i]][2])
@@ -32,5 +30,19 @@ todos_alelos <- unlist(hijos)
 frecuencias <- table (todos_alelos)
 cat("Frecuencia de alelos:")
 print(frecuencias)
+
+### Regresar los objetos ###
+
+return(list(
+  hijos = hijos,
+  frecuencias = frecuencias 
+)) 
+
+}
+
+### Prueba ###
+
+sirve <- predecir_MHC(MHC_padre, MHC_madre, n_hijos = 3)
+
 
 
