@@ -35,8 +35,8 @@ print(frecuencias)
 
 return(list(
   hijos = hijos,
-  frecuencias = frecuencias 
-)) 
+  frecuencias = frecuencias
+  ))
 
 }
 
