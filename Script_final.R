@@ -27,6 +27,10 @@ for (i in 1: length (hijos)) {
   cat ("hijo", i, ":", hijos [[i]][1], "+", hijos [[i]][2])
 }
 
-
+##Conteo de alelos 
+todos_alelos <- unlist(hijos)
+frecuencias <- table (todos_alelos)
+cat("Frecuencia de alelos:")
+print(frecuencias)
 
 
